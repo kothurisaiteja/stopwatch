@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    /* Animated Gradient Background */
+    background: linear-gradient(
+        -45deg,
+        #ff6b6b,
+        #ffb347,
+        #845ec2,
+        #00c9a7
+    );
+
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+#Myh1{
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    margin-bottom: 25px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 2px solid rgba(255,255,255,0.3);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+#timer{
+    font-weight: bold;
+    text-align: center;
+    font-size: 5rem;
+    font-family: monospace;
+
+    margin-bottom: 30px;
+
+    color: white;
+
+    text-shadow: 
+        0 0 10px rgba(255,255,255,0.7),
+        0 0 20px rgba(255,255,255,0.5),
+        2px 2px 5px rgba(0,0,0,0.5);
+}
+
+button{
+    border: none;
+
+    text-align: center;
+
+    padding: 12px 20px;
+
+    min-width: 180px;
+
+    font-weight: bold;
+    font-size: 1rem;
+
+    border-radius: 15px;
+
+    color: white;
+
+    cursor: pointer;
+
+    margin: 10px;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Button Hover Animation */
+button:hover{
+    transform: translateY(-3px) scale(1.03);
+}
+
+/* Start Button */
+#st{
+    background: linear-gradient(135deg,#00c853,#64dd17);
+
+    box-shadow:
+        0 4px 15px rgba(0,200,83,0.4);
+}
+
+#st:hover{
+    background: linear-gradient(135deg,#00e676,#76ff03);
+
+    box-shadow:
+        0 6px 20px rgba(0,255,0,0.5);
+}
+
+/* Reset Button */
+#rs{
+    background: linear-gradient(135deg,#00b0ff,#2979ff);
+
+    box-shadow:
+        0 4px 15px rgba(0,176,255,0.4);
+}
+
+#rs:hover{
+    background: linear-gradient(135deg,#40c4ff,#448aff);
+
+    box-shadow:
+        0 6px 20px rgba(0,176,255,0.5);
+}
+
+/* Stop Button (Optional) */
+#sp{
+    background: linear-gradient(135deg,#ff5252,#ff1744);
+
+    box-shadow:
+        0 4px 15px rgba(255,82,82,0.4);
+}
+
+#sp:hover{
+    background: linear-gradient(135deg,#ff867f,#ff1744);
+
+    box-shadow:
+        0 6px 20px rgba(255,82,82,0.5);
+}
